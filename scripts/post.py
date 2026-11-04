@@ -177,6 +177,34 @@ def enabled():
     }
 
 
+def check_connections(on):
+    """Test mode: kay9ra ghir (read-only) bach ytchiki les accès, bla ma yposti walo."""
+    if on["facebook_photos"]:
+        try:
+            p = graph("GET", FB_PAGE_ID, fields="name")
+            print(f"  [conn] Facebook page OK: {p.get('name')}")
+        except Exception as e:
+            print(f"  [conn] Facebook FAIL: {e}", file=sys.stderr)
+    if on["instagram_carousel"]:
+        try:
+            u = graph("GET", IG_USER_ID, fields="username")
+            print(f"  [conn] Instagram OK: @{u.get('username')}")
+        except Exception as e:
+            print(f"  [conn] Instagram FAIL: {e}", file=sys.stderr)
+    if on["pinterest_pin"]:
+        try:
+            r = requests.get(f"{PIN_API}/boards/{PIN_BOARD}", headers={"Authorization": f"Bearer {pinterest_token()}"}, timeout=60)
+            print(f"  [conn] Pinterest board OK: {check(r, 'pinterest board').get('name')}")
+        except Exception as e:
+            print(f"  [conn] Pinterest FAIL: {e}", file=sys.stderr)
+    if on["tiktok_video"]:
+        try:
+            tiktok_token()
+            print("  [conn] TikTok token OK")
+        except Exception as e:
+            print(f"  [conn] TikTok FAIL: {e}", file=sys.stderr)
+
+
 def next_folder():
     ready = lambda p: (p / "post.json").exists() and (READY / p.name / "video.mp4").exists()
     folders = sorted([p for p in POSTS.iterdir() if p.is_dir() and ready(p)], key=lambda p: nat(p.name))
@@ -238,6 +266,7 @@ def main():
             print(f"  [FAIL] {name}: {e}", file=sys.stderr)
 
     if DRY:
+        check_connections(on)
         print("DRY RUN: walo ma tposta.")
         return
     if ok:
