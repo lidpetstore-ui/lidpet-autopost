@@ -34,6 +34,8 @@ PIN_API = "https://api.pinterest.com/v5"
 PIN_APP_ID, PIN_APP_SECRET = env("PINTEREST_APP_ID", ""), env("PINTEREST_APP_SECRET", "")
 PIN_REFRESH, PIN_TOKEN = env("PINTEREST_REFRESH_TOKEN", ""), env("PINTEREST_ACCESS_TOKEN", "")
 PIN_BOARD = env("PINTEREST_BOARD_ID", "")
+# Pinterest Trial access kay9ad pins mkhbbyin (sandbox). Khlliha "0" 7ta tjik Standard access.
+PIN_LIVE = env("PINTEREST_LIVE", "0") == "1"
 
 TT_API = "https://open.tiktokapis.com/v2"
 TT_KEY, TT_SECRET, TT_REFRESH = env("TIKTOK_CLIENT_KEY", ""), env("TIKTOK_CLIENT_SECRET", ""), env("TIKTOK_REFRESH_TOKEN", "")
@@ -122,9 +124,21 @@ def pinterest_token():
     return PIN_TOKEN
 
 
+def pinterest_board_id(token, name):
+    """Board 3la 7sab smiya f post.json ("board"), ola PINTEREST_BOARD_ID ila ma tl9atch."""
+    if name:
+        r = requests.get(f"{PIN_API}/boards", headers={"Authorization": f"Bearer {token}"},
+                         params={"page_size": 100}, timeout=60)
+        for b in check(r, "pinterest boards").get("items", []):
+            if b["name"].strip().lower() == name.strip().lower():
+                return b["id"]
+        print(f"  [warn] board '{name}' ma tl9atch, kanst3ml PINTEREST_BOARD_ID")
+    return PIN_BOARD
+
+
 def pinterest_pin(image, cfg):
     token = pinterest_token()
-    body = {"board_id": PIN_BOARD, "title": cfg["pin_title"][:100], "description": cfg["pin_description"][:500],
+    body = {"board_id": pinterest_board_id(token, cfg.get("board")), "title": cfg["pin_title"][:100], "description": cfg["pin_description"][:500],
             "link": cfg["url"], "alt_text": cfg["pin_title"][:500],
             "media_source": {"source_type": "image_url", "url": raw_url(image)}}
     r = requests.post(f"{PIN_API}/pins", headers={"Authorization": f"Bearer {token}"}, json=body, timeout=120)
@@ -172,7 +186,7 @@ def enabled():
         "instagram_reel": bool(FB_TOKEN and IG_USER_ID),
         "facebook_photos": bool(FB_TOKEN and FB_PAGE_ID),
         "facebook_video": bool(FB_TOKEN and FB_PAGE_ID),
-        "pinterest_pin": bool(PIN_BOARD and (PIN_TOKEN or (PIN_REFRESH and PIN_APP_ID and PIN_APP_SECRET))),
+        "pinterest_pin": PIN_LIVE and bool(PIN_BOARD and (PIN_TOKEN or (PIN_REFRESH and PIN_APP_ID and PIN_APP_SECRET))),
         "tiktok_video": bool(TT_KEY and TT_SECRET and TT_REFRESH),
     }
 
@@ -197,10 +211,11 @@ def check_connections(on):
             print(f"  [conn] Instagram OK: @{u.get('username')}")
         except Exception as e:
             print(f"  [conn] Instagram FAIL: {e}", file=sys.stderr)
-    if on["pinterest_pin"]:
+    if PIN_BOARD and PIN_REFRESH:
         try:
-            r = requests.get(f"{PIN_API}/boards/{PIN_BOARD}", headers={"Authorization": f"Bearer {pinterest_token()}"}, timeout=60)
-            print(f"  [conn] Pinterest board OK: {check(r, 'pinterest board').get('name')}")
+            r = requests.get(f"{PIN_API}/user_account", headers={"Authorization": f"Bearer {pinterest_token()}"}, timeout=60)
+            state = "LIVE" if PIN_LIVE else "OFF (PINTEREST_LIVE=0, tsenna Standard access)"
+            print(f"  [conn] Pinterest OK: @{check(r, 'pinterest user').get('username')} | {state}")
         except Exception as e:
             print(f"  [conn] Pinterest FAIL: {e}", file=sys.stderr)
     if on["tiktok_video"]:

@@ -104,6 +104,29 @@ def token_request(app_id, secret, data):
     return r.json()
 
 
+def sandbox_demo(token, repo):
+    """Board + pin dyal tjriba f Pinterest SANDBOX (l vidéo demo dyal Standard access).
+    Sandbox token kayt-generea men page dyal l'app f developers.pinterest.com."""
+    if not token:
+        sys.exit("Zid PINTEREST_SANDBOX_TOKEN f text.env (men page dyal l'app > Sandbox).")
+    H = {"Authorization": f"Bearer {token}"}
+    print("\nDemo (SANDBOX): kan9ad board w pin dyal tjriba...")
+    b = requests.post(f"{SANDBOX}/boards", headers=H, json={"name": "Lidpet Gifts (demo)"}, timeout=60)
+    print("  board:", b.status_code, b.json().get("name", b.text[:200]))
+    pin = requests.post(f"{SANDBOX}/pins", headers=H, timeout=120, json={
+        "board_id": b.json().get("id"), "title": "Good Mood Sponsored By My Dog Tee – Funny Dog Lover Shirt",
+        "description": "A funny, soft cotton tee for dog people. Shop at lidpet.store.",
+        "link": "https://lidpet.store/products/unisex-t-shirt-13",
+        "media_source": {"source_type": "image_url",
+                         "url": f"https://raw.githubusercontent.com/{repo}/main/ready/1/pin.jpg"}})
+    data = pin.json()
+    print("  pin:", pin.status_code, data.get("id", pin.text[:300]))
+    if data.get("id"):
+        print("  title:", data.get("title"))
+        print("  link :", data.get("link"))
+    print("  (Pin dyal tjriba f SANDBOX: kayban ghir lik.)")
+
+
 def set_secret(repo, name, value):
     subprocess.run(["gh", "secret", "set", name, "-R", repo], input=value.encode(), check=True,
                    stdout=subprocess.DEVNULL)
@@ -115,6 +138,7 @@ def main():
     ap.add_argument("--env", required=True)
     ap.add_argument("--repo", required=True)
     ap.add_argument("--demo", action="store_true")
+    ap.add_argument("--demo-only", action="store_true", help="ghir pin dyal tjriba f sandbox (bla connexion)")
     ap.add_argument("--localhost", action="store_true", help="khdem b http://localhost:8085/ f blast page dyal store")
     a = ap.parse_args()
 
@@ -122,6 +146,10 @@ def main():
     app_id, secret = env.get("PINTEREST_APP_ID"), env.get("PINTEREST_APP_SECRET")
     if not app_id or not secret:
         sys.exit("Zid PINTEREST_APP_ID w PINTEREST_APP_SECRET f " + a.env)
+
+    if a.demo_only:
+        sandbox_demo(env.get("PINTEREST_SANDBOX_TOKEN"), a.repo)
+        return
 
     redirect = REDIRECT if a.localhost else STORE_REDIRECT
     code = get_code(app_id) if a.localhost else get_code_paste(app_id, redirect)
@@ -134,18 +162,7 @@ def main():
     print(f"\nConnecté: @{me.get('username')} ({me.get('account_type')})")
 
     if a.demo:
-        print("\nDemo (SANDBOX): kan9ad board w pin dyal tjriba...")
-        b = requests.post(f"{SANDBOX}/boards", headers=H, json={"name": "Lidpet Gifts (demo)"}, timeout=60)
-        print("  board:", b.status_code, b.json().get("name", b.text[:200]))
-        board_id = b.json().get("id")
-        pin = requests.post(f"{SANDBOX}/pins", headers=H, timeout=120, json={
-            "board_id": board_id, "title": "Good Mood Sponsored By My Dog Tee – Funny Dog Lover Shirt",
-            "description": "A funny, soft cotton tee for dog people. Shop at lidpet.store.",
-            "link": "https://lidpet.store/products/unisex-t-shirt-13",
-            "media_source": {"source_type": "image_url",
-                             "url": f"https://raw.githubusercontent.com/{a.repo}/main/ready/1/pin.jpg"}})
-        print("  pin:", pin.status_code, pin.json().get("id", pin.text[:300]))
-        print("  (Hada pin dyal tjriba f SANDBOX, machi visible f Pinterest.)")
+        sandbox_demo(env.get("PINTEREST_SANDBOX_TOKEN"), a.repo)
 
     boards = requests.get(f"{API}/boards", headers=H, params={"page_size": 50}, timeout=60).json().get("items", [])
     print("\nLes boards dyalk:")
