@@ -181,8 +181,10 @@ def check_connections(on):
     """Test mode: kay9ra ghir (read-only) bach ytchiki les accès, bla ma yposti walo."""
     if on["facebook_photos"]:
         try:
-            p = graph("GET", FB_PAGE_ID, fields="name")
-            print(f"  [conn] Facebook page OK: {p.get('name')}")
+            p = graph("GET", FB_PAGE_ID, fields="name,category,link,instagram_business_account")
+            linked = (p.get("instagram_business_account") or {}).get("id")
+            print(f"  [conn] Facebook page OK: {p.get('name')} | category: {p.get('category')} | {p.get('link')}"
+                  f" | Instagram linked to this page: {'YES' if linked and linked == IG_USER_ID else 'NO'}")
         except Exception as e:
             print(f"  [conn] Facebook FAIL: {e}", file=sys.stderr)
     if on["instagram_carousel"]:
