@@ -1,0 +1,61 @@
+{
+  "board": "Lidpet – Gifts for Pet Lovers",
+  "product": "My Dog's Emotional Support Human Tee",
+  "short_name": "Emotional Support Human",
+  "price": "$22.99",
+  "url": "https://lidpet.store/products/emotional-support-human-tee",
+  "headline": [
+    "MY DOG'S EMOTIONAL",
+    "SUPPORT HUMAN"
+  ],
+  "pin_subtitle": "Funny dog lover tee · your dog chose you",
+  "skip_images": [
+    "velora-ad-do-not-post.png"
+  ],
+  "mockups": [
+    "black-heather.jpg",
+    "gold.jpg",
+    "ocean-blue.jpg",
+    "soft-pink.jpg",
+    "heather-columbia-blue.jpg",
+    "white.jpg"
+  ],
+  "video": {
+    "scenes": [
+      {
+        "image": "1.png",
+        "top": [
+          "My dog chose me."
+        ],
+        "bottom": [
+          "I'm the emotional",
+          "support human."
+        ],
+        "highlight": [
+          "human."
+        ],
+        "seconds": 4.0
+      },
+      {
+        "image": "2.png",
+        "bottom": [
+          "Your dog's",
+          "favorite human"
+        ],
+        "highlight": [
+          "favorite"
+        ],
+        "zoom": [
+          1.4,
+          1.46
+        ],
+        "focus": 0.4
+      }
+    ],
+    "colors_after": 0
+  },
+  "caption": "This is my dog's emotional support human. 🐶💛\n\nYour dog chose you. Might as well wear it.\n\n🐾 Soft cotton tee in 6 colors · XS–2XL\n🐾 A funny gift for every dog person\n\nShop now: link in bio · lidpet.store\n\n#doglover #dogsofinstagram #dogparent #petparent #dogowner #funnytshirt #giftfordoglovers #lidpet",
+  "tiktok_caption": "My dog chose me. I'm the emotional support human 🐶 Link in bio #dogtok #doglover #funnytshirt #lidpet",
+  "pin_title": "My Dog's Emotional Support Human Tee – Funny Dog Lover Shirt",
+  "pin_description": "A funny tee for every dog person. Your dog chose you, so wear it proudly. 6 colors, sizes XS–2XL. Shop at lidpet.store."
+}

@@ -1,0 +1,71 @@
+{
+  "board": "Lidpet – Gifts for Pet Lovers",
+  "product": "Dogs Before Dudes Tee",
+  "short_name": "Dogs Before Dudes Tee",
+  "price": "$23.99",
+  "url": "https://lidpet.store/products/dogs-before-dudes-funny-dog-lover-tee",
+  "headline": [
+    "DOGS BEFORE",
+    "DUDES"
+  ],
+  "pin_subtitle": "Funny dog lover tee · because the dog comes first",
+  "mockups": [
+    "6.jpg",
+    "8.jpg",
+    "9.jpg",
+    "5.jpg",
+    "7.jpg"
+  ],
+  "video": {
+    "scenes": [
+      {
+        "image": "4.png",
+        "top": [
+          "My dog",
+          "comes first."
+        ],
+        "bottom": [
+          "No debate."
+        ],
+        "highlight": [
+          "dog"
+        ],
+        "seconds": 4.0,
+        "zoom": [
+          1.5,
+          1.56
+        ],
+        "zoom_x": 0.1,
+        "zoom_y": 0.8
+      },
+      {
+        "image": "5.jpg",
+        "top": [
+          "Dogs before"
+        ],
+        "bottom": [
+          "dudes."
+        ],
+        "highlight": [
+          "dudes."
+        ]
+      },
+      {
+        "image": "7.jpg",
+        "bottom": [
+          "Some relationships",
+          "just come first"
+        ],
+        "highlight": [
+          "first"
+        ]
+      }
+    ],
+    "colors_after": 1
+  },
+  "caption": "Dogs before dudes. 🐶❤️\n\nSome relationships just come first.\n\n🐾 Soft cotton tee in 5 colors · XS–2XL\n🐾 For anyone whose dog is their favorite person\n\nShop now: link in bio · lidpet.store\n\n#doglover #dogsofinstagram #dogparent #petparent #dogowner #funnytshirt #giftfordoglovers #lidpet",
+  "tiktok_caption": "My dog comes first. No debate 🐶 Link in bio #dogtok #doglover #funnytshirt #lidpet",
+  "pin_title": "Dogs Before Dudes Tee – Funny Dog Lover Shirt",
+  "pin_description": "A funny dog lover tee for people whose dog always comes first. 5 colors, sizes XS–2XL. Shop at lidpet.store.",
+  "pin_hero_zoom": 1.5
+}

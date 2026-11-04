@@ -1,0 +1,68 @@
+{
+  "board": "Lidpet – Gifts for Pet Lovers",
+  "product": "Best Friends Forever Oversized Tee",
+  "short_name": "Best Friends Forever Tee",
+  "price": "$37.99",
+  "url": "https://lidpet.store/products/best-friends-forever-oversized-tee",
+  "headline": [
+    "BEST FRIENDS",
+    "FOREVER"
+  ],
+  "pin_subtitle": "Oversized dog & cat tee · for pet best friends",
+  "mockups": [
+    "5.jpg",
+    "7.jpg",
+    "4.jpg",
+    "10.jpg"
+  ],
+  "video": {
+    "scenes": [
+      {
+        "image": "1.png",
+        "top": [
+          "Best friends"
+        ],
+        "bottom": [
+          "forever."
+        ],
+        "highlight": [
+          "forever."
+        ],
+        "seconds": 4.0,
+        "zoom": [
+          1.6,
+          1.66
+        ],
+        "focus": 0.15
+      },
+      {
+        "image": "3.jpg",
+        "top": [
+          "Big print"
+        ],
+        "bottom": [
+          "on the back"
+        ],
+        "highlight": [
+          "back"
+        ]
+      },
+      {
+        "image": "9.jpg",
+        "bottom": [
+          "Oversized fit.",
+          "Made for pet people."
+        ],
+        "highlight": [
+          "pet"
+        ]
+      }
+    ],
+    "colors_after": 1
+  },
+  "caption": "Best friends forever. 🐶🐱\n\nA dog, a cat, and a love that doesn't need words.\n\n🐾 Oversized tee with a big back print · 5 colors\n🐾 For every dog and cat best friend\n\nShop now: link in bio · lidpet.store\n\n#doglover #catlover #petparent #oversizedtee #streetwear #giftforpetlovers #lidpet",
+  "tiktok_caption": "Best friends forever 🐶🐱 Big print on the back. Link in bio #oversizedtee #doglover #catlover #lidpet",
+  "pin_title": "Best Friends Forever Oversized Tee – Dog and Cat Lover Shirt",
+  "pin_description": "An oversized tee with a cute dog and cat back print. 5 colors. A sweet gift for pet lovers. Shop at lidpet.store.",
+  "pin_hero_zoom": 1.0
+}

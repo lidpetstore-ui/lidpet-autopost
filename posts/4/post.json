@@ -1,0 +1,75 @@
+{
+  "board": "Lidpet – Gifts for Pet Lovers",
+  "product": "My Favorite Child Has 4 Legs Hoodie",
+  "short_name": "My Favorite Child Hoodie",
+  "price": "$35.99",
+  "url": "https://lidpet.store/products/my-favorite-child-has-4-legs-pet-parent-hoodie",
+  "headline": [
+    "MY FAVORITE CHILD",
+    "HAS 4 LEGS"
+  ],
+  "pin_subtitle": "Cozy pet parent hoodie · a gift for every pet lover",
+  "mockups": [
+    "5.jpg",
+    "6.jpg",
+    "7.jpg",
+    "8.jpg",
+    "9.jpg"
+  ],
+  "video": {
+    "scenes": [
+      {
+        "image": "2.png",
+        "top": [
+          "Asked who my",
+          "favorite child is?"
+        ],
+        "bottom": [
+          "Easy.",
+          "Four legs."
+        ],
+        "highlight": [
+          "four"
+        ],
+        "seconds": 4.0,
+        "zoom": [
+          1.45,
+          1.52
+        ],
+        "focus": 0.55
+      },
+      {
+        "image": "5.jpg",
+        "bottom": [
+          "Cozy hoodie for",
+          "proud pet parents"
+        ],
+        "highlight": [
+          "pet",
+          "parents"
+        ]
+      },
+      {
+        "image": "4.png",
+        "bottom": [
+          "Same love.",
+          "More paws."
+        ],
+        "highlight": [
+          "paws."
+        ],
+        "zoom": [
+          1.45,
+          1.52
+        ],
+        "focus": 0.5
+      }
+    ],
+    "colors_after": 1
+  },
+  "caption": "My favorite child has 4 legs. 🐾\n\nNo explanation needed. Every pet parent gets it.\n\n🧡 Cozy hoodie in 5 colors\n🧡 The gift for the pet parent who has everything\n\nShop now: link in bio · lidpet.store\n\n#petparent #doglover #catlover #dogsofinstagram #catsofinstagram #hoodieseason #giftforpetlovers #lidpet",
+  "tiktok_caption": "Asked who my favorite child is? Easy. Four legs 🐾 Link in bio #petparent #dogtok #cattok #hoodie #lidpet",
+  "pin_title": "My Favorite Child Has 4 Legs Hoodie – Funny Pet Parent Sweatshirt",
+  "pin_description": "A cozy hoodie for proud dog and cat parents. 5 colors. A perfect Christmas gift for pet lovers. Shop at lidpet.store.",
+  "pin_hero_zoom": 1.4
+}

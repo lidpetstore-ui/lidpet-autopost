@@ -1,0 +1,67 @@
+{
+  "board": "Lidpet – Gifts for Pet Lovers",
+  "product": "5 AM Walk Club Tee",
+  "short_name": "5 AM Walk Club Tee",
+  "price": "$25.99",
+  "url": "https://lidpet.store/products/5-am-walk-club-t-shirt-hiking-dog-owner-morning-walk-tee",
+  "headline": [
+    "5 AM",
+    "WALK CLUB"
+  ],
+  "pin_subtitle": "Dog walking tee · for every early morning walker",
+  "mockups": [
+    "4.jpg",
+    "5.jpg",
+    "6.jpg",
+    "7.jpg"
+  ],
+  "video": {
+    "scenes": [
+      {
+        "image": "2.png",
+        "top": [
+          "Alarm: 5 AM"
+        ],
+        "bottom": [
+          "My dog: let's go."
+        ],
+        "highlight": [
+          "dog:"
+        ],
+        "seconds": 4.0
+      },
+      {
+        "image": "1.png",
+        "top": [
+          "Members only:"
+        ],
+        "bottom": [
+          "5 AM Walk Club"
+        ],
+        "highlight": [
+          "club"
+        ],
+        "zoom": [
+          1.6,
+          1.66
+        ],
+        "focus": 0.62
+      },
+      {
+        "image": "4.jpg",
+        "bottom": [
+          "For every early",
+          "morning walker"
+        ],
+        "highlight": [
+          "morning"
+        ]
+      }
+    ],
+    "colors_after": 1
+  },
+  "caption": "Welcome to the 5 AM Walk Club. 🌄🐕\n\nNo alarm needed. The dog takes care of that.\n\n🐾 Soft cotton tee in 4 colors · XS–2XL\n🐾 For hikers, early risers and every dog walker\n\nShop now: link in bio · lidpet.store\n\n#doglover #dogsofinstagram #dogparent #petparent #dogowner #funnytshirt #giftfordoglovers #lidpet #dogwalk #hikingwithdogs",
+  "tiktok_caption": "Alarm: 5 AM. My dog: let's go 🌄 Link in bio #dogtok #hikingwithdogs #doglover #lidpet",
+  "pin_title": "5 AM Walk Club Tee – Dog Walking and Hiking Shirt",
+  "pin_description": "A tee for early morning dog walkers and hikers. 4 colors, sizes XS–2XL. A great gift for dog owners. Shop at lidpet.store."
+}

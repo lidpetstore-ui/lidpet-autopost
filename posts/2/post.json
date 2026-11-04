@@ -1,0 +1,77 @@
+{
+  "board": "Lidpet – Gifts for Pet Lovers",
+  "product": "Best Cat Ever? Yeah, That Was Me Tee",
+  "short_name": "Best Cat Ever Tee",
+  "price": "$25.99",
+  "url": "https://lidpet.store/products/best-cat-ever-yeah-that-was-me-t-shirt-funny-cat-lover-sarcastic-tee",
+  "headline": [
+    "BEST CAT EVER?",
+    "YEAH, THAT WAS ME"
+  ],
+  "pin_subtitle": "Funny cat lover tee · a gift for every cat person",
+  "mockups": [
+    "4.jpg",
+    "5.jpg",
+    "6.jpg",
+    "7.jpg",
+    "8.jpg",
+    "9.jpg"
+  ],
+  "video": {
+    "scenes": [
+      {
+        "image": "3.jpg",
+        "top": [
+          "POV:"
+        ],
+        "bottom": [
+          "your cat thinks",
+          "this shirt is about them"
+        ],
+        "highlight": [
+          "cat"
+        ],
+        "seconds": 4.0
+      },
+      {
+        "image": "2.jpg",
+        "top": [
+          "Best cat ever?"
+        ],
+        "bottom": [
+          "Yeah.",
+          "That was me."
+        ],
+        "highlight": [
+          "me."
+        ],
+        "zoom": [
+          1.35,
+          1.42
+        ],
+        "focus": 0.5
+      },
+      {
+        "image": "1.jpg",
+        "bottom": [
+          "The tee every",
+          "cat lover needs"
+        ],
+        "highlight": [
+          "cat",
+          "lover"
+        ],
+        "zoom": [
+          1.35,
+          1.42
+        ],
+        "focus": 0.5
+      }
+    ],
+    "colors_after": 1
+  },
+  "caption": "Best cat ever? Yeah, that was me. 😼\n\nFor everyone who knows exactly who runs the house.\n\n🐾 Soft cotton tee in 6 colors · XS–2XL\n🐾 The perfect gift for any cat person\n\nShop now: link in bio · lidpet.store\n\n#catlover #catsofinstagram #catparent #petparent #catowner #funnytshirt #giftforcatlovers #lidpet #sarcasticshirt #catsoftiktok",
+  "tiktok_caption": "Best cat ever? Yeah, that was me 😼 Link in bio 🛒 #cattok #catlover #funnytshirt #catsoftiktok #lidpet",
+  "pin_title": "Best Cat Ever Yeah That Was Me Tee – Funny Cat Lover Shirt",
+  "pin_description": "A sarcastic, soft cotton tee for cat people. 6 colors, sizes XS–2XL. A great gift for any cat owner. Shop at lidpet.store."
+}

@@ -1,0 +1,74 @@
+{
+  "board": "Lidpet – Gifts for Pet Lovers",
+  "product": "I'm Here For The Dogs Tee",
+  "short_name": "Here For The Dogs Tee",
+  "price": "$22.99",
+  "url": "https://lidpet.store/products/im-here-for-the-dogs-tee",
+  "headline": [
+    "I'M HERE",
+    "FOR THE DOGS"
+  ],
+  "pin_subtitle": "Funny dog lover tee · for every party with a dog",
+  "mockups": [
+    "4.jpg",
+    "5.jpg",
+    "6.jpg",
+    "7.jpg",
+    "8.jpg",
+    "9.jpg"
+  ],
+  "video": {
+    "scenes": [
+      {
+        "image": "3.png",
+        "top": [
+          "Me at every party:"
+        ],
+        "bottom": [
+          "I'm here",
+          "for the dogs."
+        ],
+        "highlight": [
+          "dogs."
+        ],
+        "seconds": 4.0
+      },
+      {
+        "image": "1.png",
+        "bottom": [
+          "Wear what you love"
+        ],
+        "highlight": [
+          "love"
+        ],
+        "zoom": [
+          1.6,
+          1.66
+        ],
+        "focus": 0.62
+      },
+      {
+        "image": "2.png",
+        "bottom": [
+          "The tee every",
+          "dog lover needs"
+        ],
+        "highlight": [
+          "dog",
+          "lover"
+        ],
+        "zoom": [
+          1.45,
+          1.52
+        ],
+        "focus": 0.45
+      }
+    ],
+    "colors_after": 1
+  },
+  "caption": "Me at every party: I'm here for the dogs. 🐶🎉\n\nPeople are great. Dogs are better.\n\n🐾 Soft cotton tee in 9 colors · XS–2XL\n🐾 A gift for anyone who says hi to the dog first\n\nShop now: link in bio · lidpet.store\n\n#doglover #dogsofinstagram #dogparent #petparent #dogowner #funnytshirt #giftfordoglovers #lidpet",
+  "tiktok_caption": "Me at every party: I'm here for the dogs 🐶 Link in bio #dogtok #doglover #funnytshirt #lidpet",
+  "pin_title": "I'm Here For The Dogs Tee – Funny Dog Lover Shirt",
+  "pin_description": "A funny tee for people who always say hi to the dog first. 9 colors, sizes XS–2XL. Shop at lidpet.store.",
+  "pin_hero_zoom": 1.0
+}
