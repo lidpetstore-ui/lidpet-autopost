@@ -27,6 +27,8 @@ import webbrowser
 import requests
 
 REDIRECT = "http://localhost:8085/"
+# Redirect li deja msejjel f app Pinterest dyal Lidpet (page f store). Kat9ra l'code men l'URL li tcolli.
+STORE_REDIRECT = "https://lidpet.store/pages/pinterest-oauth"
 SCOPES = "boards:read,boards:write,pins:read,pins:write,user_accounts:read"
 API = "https://api.pinterest.com/v5"
 SANDBOX = "https://api-sandbox.pinterest.com/v5"
@@ -76,6 +78,24 @@ def get_code(app_id):
     return box["code"]
 
 
+def get_code_paste(app_id, redirect):
+    """Pinterest kayrje3 l page f store; nta kat-copier l'URL kamla w kat-collih hna."""
+    state = pysecrets.token_urlsafe(16)
+    url = "https://www.pinterest.com/oauth/?" + urllib.parse.urlencode({
+        "client_id": app_id, "redirect_uri": redirect, "response_type": "code",
+        "scope": SCOPES, "state": state})
+    print("1) Ghadi yt7ell Pinterest f browser: clicki 'Give access'.")
+    print("   (Ila ma t7ellch, copier had l'lien:)\n   " + url + "\n")
+    webbrowser.open(url)
+    pasted = input("2) Mli tban page Lidpet 'Pinterest Connection', copier l'URL KAMLA men l'barre d'adresse w colliha hna:\n> ").strip()
+    q = urllib.parse.parse_qs(urllib.parse.urlparse(pasted).query)
+    if q.get("state", [""])[0] != state:
+        sys.exit("Had l'URL machi dyal had l'connexion (state ghalṭ). 3awed lanci l'script.")
+    if not q.get("code"):
+        sys.exit(f"Ma l9itch code f l'URL: {q.get('error', ['?'])[0]}")
+    return q["code"][0]
+
+
 def token_request(app_id, secret, data):
     auth = base64.b64encode(f"{app_id}:{secret}".encode()).decode()
     r = requests.post(f"{API}/oauth/token", headers={"Authorization": f"Basic {auth}"}, data=data, timeout=60)
@@ -95,6 +115,7 @@ def main():
     ap.add_argument("--env", required=True)
     ap.add_argument("--repo", required=True)
     ap.add_argument("--demo", action="store_true")
+    ap.add_argument("--localhost", action="store_true", help="khdem b http://localhost:8085/ f blast page dyal store")
     a = ap.parse_args()
 
     env = read_env(a.env)
@@ -102,9 +123,10 @@ def main():
     if not app_id or not secret:
         sys.exit("Zid PINTEREST_APP_ID w PINTEREST_APP_SECRET f " + a.env)
 
-    code = get_code(app_id)
+    redirect = REDIRECT if a.localhost else STORE_REDIRECT
+    code = get_code(app_id) if a.localhost else get_code_paste(app_id, redirect)
     tok = token_request(app_id, secret, {"grant_type": "authorization_code", "code": code,
-                                         "redirect_uri": REDIRECT, "continuous_refresh": "true"})
+                                         "redirect_uri": redirect, "continuous_refresh": "true"})
     access, refresh = tok["access_token"], tok.get("refresh_token", "")
     H = {"Authorization": f"Bearer {access}"}
 
