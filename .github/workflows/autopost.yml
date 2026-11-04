@@ -1,10 +1,12 @@
 name: Lidpet Auto Post
-# Lidpet: 1 post kol nhar f Instagram, Facebook, Pinterest w TikTok.
+# Lidpet: 2 posts kol nhar f Instagram, Facebook, Pinterest w TikTok (US, UK, Canada, Europe).
 
 on:
   schedule:
-    # Merra f nhar. 17:00 UTC = 12:00 f New York (US) = 18:00 f Maroc. Beddel ila bghiti.
-    - cron: "0 17 * * *"
+    # Post 1: 14:00 UTC = 9 AM New York/Toronto, 2 PM London, 3 PM Paris/Berlin.
+    - cron: "0 14 * * *"
+    # Post 2: 00:00 UTC = 7 PM New York/Toronto, 4 PM Los Angeles (prime time f US/Canada).
+    - cron: "0 0 * * *"
   workflow_dispatch:
     inputs:
       dry_run:

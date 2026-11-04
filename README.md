@@ -1,6 +1,6 @@
 # Lidpet Auto Post
 
-Kol nhar (17:00 UTC) katakhod l'post jay men `posts/`, kat9ad les creatives, w katposti:
+2 dial l'merrat f nhar (14:00 w 00:00 UTC) katakhod l'post jay men `posts/`, kat9ad les creatives, w katposti:
 
 | Plateforme | Chno katposti |
 |---|---|
