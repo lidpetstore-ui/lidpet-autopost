@@ -1,4 +1,5 @@
 name: Lidpet Auto Post
+# Lidpet: 1 post kol nhar f Instagram, Facebook, Pinterest w TikTok.
 
 on:
   schedule:
