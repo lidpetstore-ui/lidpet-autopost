@@ -186,7 +186,11 @@ def check_connections(on):
             print(f"  [conn] Facebook page OK: {p.get('name')} | category: {p.get('category')} | {p.get('link')}"
                   f" | Instagram linked to this page: {'YES' if linked and linked == IG_USER_ID else 'NO'}")
         except Exception as e:
-            print(f"  [conn] Facebook FAIL: {e}", file=sys.stderr)
+            if "nonexisting field (category)" in str(e):
+                print("  [conn] Facebook FAIL: FB_PAGE_ID howa ID dyal PROFIL personnel, machi PAGE. "
+                      "Jib l'ID dyal page Lidpet men me/accounts.", file=sys.stderr)
+            else:
+                print(f"  [conn] Facebook FAIL: {e}", file=sys.stderr)
     if on["instagram_carousel"]:
         try:
             u = graph("GET", IG_USER_ID, fields="username")
