@@ -42,6 +42,10 @@ TT_KEY, TT_SECRET, TT_REFRESH = env("TIKTOK_CLIENT_KEY", ""), env("TIKTOK_CLIENT
 # inbox = katwsel l TikTok k draft (nta tclicki Post f l'app). direct = katposti bou7dha (khass app mvalidiya).
 TT_MODE = env("TIKTOK_MODE", "inbox")
 
+# Telegram: l'vidéo + captions kaywslou lik f téléphone, w nta katposti l'Reel b trending sound.
+# Mli Telegram mconnecti, Reels dyal Instagram w vidéos dyal Facebook ma kaytposṭawch automatiquement.
+TG_TOKEN, TG_CHAT = env("TELEGRAM_BOT_TOKEN", ""), env("TELEGRAM_CHAT_ID", "")
+
 
 def nat(name):
     return (int(name) if name.isdigit() else 10**6, name)
@@ -178,14 +182,47 @@ def tiktok_video(video, caption):
     return data.get("publish_id")
 
 
+# ---------------- Telegram ----------------
+
+def tg(method, **kw):
+    r = requests.post(f"https://api.telegram.org/bot{TG_TOKEN}/{method}", timeout=300, **kw)
+    data = r.json() if r.headers.get("content-type", "").startswith("application/json") else {}
+    if not data.get("ok"):
+        raise RuntimeError(f"telegram {method}: HTTP {r.status_code} {str(data)[:300]}")
+    return data["result"]
+
+
+def facebook_caption(cfg):
+    """Facebook kaykhlli liens: caption bla hashtags bzaf + lien direct l'produit."""
+    if cfg.get("facebook_caption"):
+        return cfg["facebook_caption"]
+    lines = [ln for ln in cfg["caption"].splitlines() if not ln.strip().startswith("#")]
+    text = "\n".join(lines).replace("Shop now: link in bio · lidpet.store", f"Shop now 👉 {cfg['url']}").strip()
+    return text if cfg["url"] in text else f"{text}\n\nShop now 👉 {cfg['url']}"
+
+
+def telegram_send(video, cfg, folder_name):
+    title = f"🎬 Lidpet post {folder_name}: {cfg['product']} ({cfg['price']})\nZid trending sound w posti f Instagram, Facebook w TikTok 👇"
+    with open(video, "rb") as f:
+        tg("sendVideo", data={"chat_id": TG_CHAT, "caption": title[:1024], "supports_streaming": "true"},
+           files={"video": (f"lidpet_{folder_name}.mp4", f, "video/mp4")})
+    for label, text in (("📸 INSTAGRAM", cfg["caption"]),
+                        ("👍 FACEBOOK", facebook_caption(cfg)),
+                        ("🎵 TIKTOK", cfg.get("tiktok_caption", cfg["caption"]))):
+        tg("sendMessage", data={"chat_id": TG_CHAT, "text": f"{label}\n\n{text}"[:4096]})
+    return "sent"
+
+
 # ---------------- Main ----------------
 
 def enabled():
+    manual_video = bool(TG_TOKEN and TG_CHAT)  # l'vidéos kaymchiw l Telegram, nta katposṭihom
     return {
         "instagram_carousel": bool(FB_TOKEN and IG_USER_ID),
-        "instagram_reel": bool(FB_TOKEN and IG_USER_ID),
+        "instagram_reel": bool(FB_TOKEN and IG_USER_ID) and not manual_video,
         "facebook_photos": bool(FB_TOKEN and FB_PAGE_ID),
-        "facebook_video": bool(FB_TOKEN and FB_PAGE_ID),
+        "facebook_video": bool(FB_TOKEN and FB_PAGE_ID) and not manual_video,
+        "telegram_video": manual_video,
         "pinterest_pin": PIN_LIVE and bool(PIN_BOARD and (PIN_TOKEN or (PIN_REFRESH and PIN_APP_ID and PIN_APP_SECRET))),
         "tiktok_video": bool(TT_KEY and TT_SECRET and TT_REFRESH),
     }
@@ -224,6 +261,13 @@ def check_connections(on):
             print("  [conn] TikTok token OK")
         except Exception as e:
             print(f"  [conn] TikTok FAIL: {e}", file=sys.stderr)
+    if on["telegram_video"]:
+        try:
+            me = tg("getMe")
+            chat = tg("getChat", data={"chat_id": TG_CHAT})
+            print(f"  [conn] Telegram OK: bot @{me.get('username')} -> {chat.get('first_name') or chat.get('title')}")
+        except Exception as e:
+            print(f"  [conn] Telegram FAIL: {e}", file=sys.stderr)
 
 
 def next_folder():
@@ -255,10 +299,11 @@ def main():
     steps = {
         "instagram_carousel": lambda: instagram_carousel(carousel, cfg["caption"]),
         "instagram_reel": lambda: instagram_reel(video, cfg["caption"]),
-        "facebook_photos": lambda: facebook_photos(carousel, cfg["caption"]),
+        "facebook_photos": lambda: facebook_photos(carousel, facebook_caption(cfg)),
         "facebook_video": lambda: facebook_video(video, cfg["caption"]),
         "pinterest_pin": lambda: pinterest_pin(pin, cfg),
         "tiktok_video": lambda: tiktok_video(video, cfg.get("tiktok_caption", cfg["caption"])),
+        "telegram_video": lambda: telegram_send(video, cfg, folder.name),
     }
     on = enabled()
     if not any(on.values()) and not DRY:
