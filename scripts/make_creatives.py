@@ -259,8 +259,36 @@ def end_card(cfg, tl):
     return frame
 
 
+MUSIC = ASSETS / "music"
+AUDIO_EXT = (".mp3", ".m4a", ".wav", ".aac", ".ogg")
+
+
+def pick_music(folder, cfg):
+    """Music men assets/music/ (libre de droits). post.json "music" = smiya dyal fichier, sinon kol post katakhod wa7da b dour."""
+    tracks = sorted(p for p in MUSIC.glob("*") if p.suffix.lower() in AUDIO_EXT) if MUSIC.exists() else []
+    if not tracks:
+        return None
+    if cfg.get("music"):
+        chosen = MUSIC / cfg["music"]
+        return chosen if chosen.exists() else None
+    n = int(folder.name) if folder.name.isdigit() else sum(map(ord, folder.name))
+    return tracks[n % len(tracks)]
+
+
+def add_music(silent, track, out_path):
+    """Kayzid music: kat9ṭa3 3la ṭol l'vidéo, fade in/out, volume m3tadel."""
+    dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0",
+                                str(silent)], capture_output=True, text=True, check=True).stdout.strip())
+    fade_out = max(0.0, dur - 1.5)
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(silent), "-stream_loop", "-1", "-i", str(track),
+                    "-filter:a", f"volume=0.7,afade=t=in:st=0:d=0.8,afade=t=out:st={fade_out:.2f}:d=1.5",
+                    "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "aac", "-b:a", "160k",
+                    "-t", f"{dur:.2f}", "-movflags", "+faststart", str(out_path)], check=True)
+
+
 def make_video(folder, cfg, out):
-    path = out / "video.mp4"
+    track = pick_music(folder, cfg)
+    path = out / ("video_silent.mp4" if track else "video.mp4")
     ff = subprocess.Popen(
         ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{VW}x{VH}",
          "-r", str(FPS), "-i", "-", "-c:v", "libx264", "-preset", "medium", "-crf", "21",
@@ -287,6 +315,10 @@ def make_video(folder, cfg, out):
     ff.stdin.close()
     if ff.wait() != 0:
         raise RuntimeError("ffmpeg fshl f " + str(folder))
+    if track:
+        add_music(path, track, out / "video.mp4")
+        path.unlink()
+        print(f"    music: {track.name}")
 
 
 def build(folder: Path):
