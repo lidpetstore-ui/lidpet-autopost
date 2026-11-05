@@ -1,0 +1,79 @@
+{
+  "board": "Pet Parent Gifts",
+  "product": "World's Best Pet Parent Tee",
+  "short_name": "World's Best Pet Parent",
+  "price": "$23.99",
+  "url": "https://lidpet.store/products/professional-pet-servant-funny-pet-parent-tee",
+  "headline": [
+    "WORLD'S BEST",
+    "PET PARENT"
+  ],
+  "pin_subtitle": "Funny pet parent tee · a gift for every dog & cat lover",
+  "mockups": [
+    "black-heather.jpg",
+    "cardinal.jpg",
+    "navy.jpg",
+    "pink.jpg",
+    "athletic-heather.jpg",
+    "white.jpg"
+  ],
+  "pin_hero_zoom": 1.3,
+  "video": {
+    "scenes": [
+      {
+        "image": "1.png",
+        "top": [
+          "Your pet called."
+        ],
+        "bottom": [
+          "You won an award."
+        ],
+        "highlight": [
+          "award."
+        ],
+        "seconds": 4.0,
+        "zoom": [
+          2.0,
+          2.06
+        ],
+        "zoom_y": 0.08,
+        "zoom_x": 0.5
+      },
+      {
+        "image": "2.png",
+        "top": [
+          "World's best"
+        ],
+        "bottom": [
+          "pet parent."
+        ],
+        "highlight": [
+          "pet",
+          "parent."
+        ],
+        "zoom": [
+          1.75,
+          1.8
+        ],
+        "zoom_y": 0.42,
+        "zoom_x": 0.62
+      },
+      {
+        "image": "pink.jpg",
+        "bottom": [
+          "The tee every",
+          "pet lover deserves"
+        ],
+        "highlight": [
+          "pet",
+          "lover"
+        ]
+      }
+    ],
+    "colors_after": 1
+  },
+  "caption": "Officially the World's Best Pet Parent. 🏆🐾\n\nNo votes needed. Your dog or cat already decided.\n\n🐾 Soft cotton tee in 6 colors · XS–2XL\n🐾 The perfect gift for any dog or cat parent\n\nShop now: link in bio · lidpet.store\n\n#doglover #catlover #petparent #dogsofinstagram #catsofinstagram #funnytshirt #giftforpetlovers #lidpet",
+  "tiktok_caption": "Your pet called. You won World's Best Pet Parent 🏆 Link in bio #petparent #dogtok #cattok #funnytshirt #lidpet",
+  "pin_title": "World's Best Pet Parent Tee – Funny Dog and Cat Parent Shirt",
+  "pin_description": "A funny trophy tee for the world's best dog or cat parent. 6 colors, sizes XS–2XL. A great gift for pet lovers. Shop at lidpet.store."
+}
