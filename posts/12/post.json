@@ -1,0 +1,74 @@
+{
+  "priority": 4,
+  "product": "Christmas Elk & Tree Knit Dog Sweater",
+  "short_name": "Christmas Dog Sweater",
+  "price": "$24.99",
+  "url": "https://lidpet.store/products/christmas-dog-sweater-elk-tree",
+  "headline": [
+    "CHRISTMAS",
+    "DOG SWEATER"
+  ],
+  "pin_subtitle": "Cozy knit sweater for dogs · Elk or Christmas Tree",
+  "image_order": [
+    "01.jpg",
+    "05.jpg",
+    "03.jpg",
+    "02.jpg",
+    "04.jpg",
+    "06.jpg"
+  ],
+  "mockups": [
+    "02.jpg",
+    "04.jpg",
+    "06.jpg",
+    "03.jpg"
+  ],
+  "video": {
+    "scenes": [
+      {
+        "image": "01.jpg",
+        "top": [
+          "Your dog in"
+        ],
+        "bottom": [
+          "the family",
+          "Christmas photo"
+        ],
+        "highlight": [
+          "christmas"
+        ],
+        "seconds": 4.0
+      },
+      {
+        "image": "05.jpg",
+        "top": [
+          "Soft knit."
+        ],
+        "bottom": [
+          "Warm walks."
+        ],
+        "highlight": [
+          "warm"
+        ]
+      },
+      {
+        "image": "03.jpg",
+        "bottom": [
+          "Elk or Tree",
+          "XS to XXL"
+        ],
+        "highlight": [
+          "xxl"
+        ]
+      }
+    ],
+    "colors_after": 1,
+    "colors_text": "Pick your style",
+    "fit": true
+  },
+  "caption": "The family Christmas photo just got a new star. 🎄🐶\n\nA soft knit sweater that keeps your dog warm on winter walks and camera-ready for the holidays.\n\n🐾 Elk or Christmas Tree design\n🐾 Sizes XS–XXL\n\n🎄 Order by December 10 for Christmas delivery.\n\nShop now: link in bio · lidpet.store\n\n#doglover #dogsofinstagram #dogparent #petparent #christmasgifts #giftfordoglovers #dogchristmas #lidpet #dogsweater",
+  "tiktok_caption": "Your dog in the family Christmas photo 🎄🐶 Link in bio #dogtok #dogsweater #christmasdog #lidpet",
+  "pin_title": "Christmas Dog Sweater – Elk and Christmas Tree Knit for Dogs",
+  "pin_description": "A cozy knit Christmas sweater for dogs in Elk or Christmas Tree design, sizes XS–XXL. The holiday photo outfit your dog will actually wear. Shop at lidpet.store.",
+  "board": "Pet Christmas Gifts"
+}

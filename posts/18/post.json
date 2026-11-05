@@ -1,0 +1,73 @@
+{
+  "board": "Pet Parent Gifts",
+  "product": "Peekaboo Cat Tunnel Bed",
+  "short_name": "Peekaboo Cat Bed",
+  "price": "$59.99",
+  "url": "https://lidpet.store/products/peekaboo-cat-tunnel-bed",
+  "headline": [
+    "PEEKABOO",
+    "CAT TUNNEL BED"
+  ],
+  "pin_subtitle": "Play tunnel and cozy bed in one",
+  "image_order": [
+    "01.jpg",
+    "03.jpg",
+    "08.jpg",
+    "02.jpg",
+    "04.jpg",
+    "06.jpg",
+    "07.jpg",
+    "05.jpg"
+  ],
+  "mockups": [
+    "02.jpg",
+    "04.jpg",
+    "06.jpg",
+    "08.jpg"
+  ],
+  "video": {
+    "scenes": [
+      {
+        "image": "01.jpg",
+        "top": [
+          "Part tunnel."
+        ],
+        "bottom": [
+          "Part nap spot."
+        ],
+        "highlight": [
+          "nap"
+        ],
+        "seconds": 4.0
+      },
+      {
+        "image": "03.jpg",
+        "top": [
+          "Peekaboo holes"
+        ],
+        "bottom": [
+          "for surprise attacks"
+        ],
+        "highlight": [
+          "attacks"
+        ]
+      },
+      {
+        "image": "08.jpg",
+        "bottom": [
+          "Play and sleep",
+          "in one place"
+        ],
+        "highlight": [
+          "sleep"
+        ]
+      }
+    ],
+    "colors_after": 9,
+    "fit": true
+  },
+  "caption": "Part tunnel, part hideout, part nap spot. 😻\n\nA soft donut tunnel bed with peekaboo holes for ambushes and a cozy center for the nap after.\n\n🐾 Fits cats up to 22 lbs · washable mat\n\nShop now: link in bio · lidpet.store\n\n#catlover #catsofinstagram #catparent #petparent #giftforcatlovers #lidpet #catbed",
+  "tiktok_caption": "Part tunnel. Part nap spot 😻 Link in bio #cattok #catbed #catsoftiktok #lidpet",
+  "pin_title": "Peekaboo Cat Tunnel Bed – Plush Donut Tunnel for Cats",
+  "pin_description": "A soft donut-shaped tunnel bed with peekaboo holes. Your cat can play, hide and nap in one spot. Shop at lidpet.store."
+}

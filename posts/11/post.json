@@ -1,0 +1,77 @@
+{
+  "priority": 5,
+  "product": "Cat Advent Calendar – 24 Days of Toys",
+  "short_name": "Cat Advent Calendar",
+  "price": "$29.99",
+  "url": "https://lidpet.store/products/cat-advent-calendar-24-toys",
+  "headline": [
+    "CAT ADVENT",
+    "CALENDAR"
+  ],
+  "pin_subtitle": "24 surprise toys · one for every day of December",
+  "image_order": [
+    "04.jpg",
+    "02.jpg",
+    "06.jpg",
+    "01.jpg",
+    "07.jpg",
+    "05.jpg",
+    "03.jpg"
+  ],
+  "mockups": [
+    "01.jpg",
+    "07.jpg",
+    "05.jpg",
+    "03.jpg"
+  ],
+  "video": {
+    "scenes": [
+      {
+        "image": "04.jpg",
+        "top": [
+          "POV:"
+        ],
+        "bottom": [
+          "your cat gets a gift",
+          "every day of December"
+        ],
+        "highlight": [
+          "cat",
+          "gift"
+        ],
+        "seconds": 4.0
+      },
+      {
+        "image": "02.jpg",
+        "top": [
+          "24 doors."
+        ],
+        "bottom": [
+          "24 surprise toys."
+        ],
+        "highlight": [
+          "24"
+        ]
+      },
+      {
+        "image": "06.jpg",
+        "bottom": [
+          "Order by Nov 18",
+          "to start Dec 1"
+        ],
+        "highlight": [
+          "nov",
+          "18"
+        ]
+      }
+    ],
+    "colors_after": 1,
+    "colors_text": "Inside the box",
+    "fit": true
+  },
+  "caption": "You count down to Christmas. Now your cat can too. 🎄🐱\n\n24 doors, 24 surprise toys, one for every day of December.\n\n🎁 A gift every cat person will love\n📦 Order by November 18 to have it before December 1\n\nShop now: link in bio · lidpet.store\n\n#catlover #catsofinstagram #catparent #petparent #giftforcatlovers #lidpet #christmasgifts #adventcalendar",
+  "tiktok_caption": "POV: your cat gets a gift every day of December 🎄🐱 Link in bio #cattok #adventcalendar #catsoftiktok #christmasgifts #lidpet",
+  "pin_title": "Cat Advent Calendar – 24 Days of Christmas Cat Toys",
+  "pin_description": "A Christmas countdown for your cat: 24 surprise toys, one for every day of December. A perfect gift for cat lovers. Order by November 18. Shop at lidpet.store.",
+  "board": "Pet Christmas Gifts"
+}

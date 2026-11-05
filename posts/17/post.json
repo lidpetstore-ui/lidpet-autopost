@@ -1,0 +1,71 @@
+{
+  "board": "Pet Parent Gifts",
+  "product": "Motion-Activated Moving Tail Cat Toy",
+  "short_name": "Smart Cat Toy",
+  "price": "$49.99",
+  "url": "https://lidpet.store/products/motion-activated-moving-tail-cat-toy",
+  "headline": [
+    "SMART",
+    "CAT TOY"
+  ],
+  "pin_subtitle": "Moving tail that wakes up when your cat comes near",
+  "image_order": [
+    "05.jpg",
+    "07.jpg",
+    "01.jpg",
+    "03.jpg",
+    "04.jpg",
+    "02.jpg",
+    "06.jpg"
+  ],
+  "mockups": [
+    "02.jpg",
+    "04.jpg",
+    "03.jpg"
+  ],
+  "video": {
+    "scenes": [
+      {
+        "image": "05.jpg",
+        "top": [
+          "For the cat who is"
+        ],
+        "bottom": [
+          "bored when you leave"
+        ],
+        "highlight": [
+          "bored"
+        ],
+        "seconds": 4.0
+      },
+      {
+        "image": "07.jpg",
+        "top": [
+          "The tail moves"
+        ],
+        "bottom": [
+          "when your cat comes near"
+        ],
+        "highlight": [
+          "cat"
+        ]
+      },
+      {
+        "image": "01.jpg",
+        "bottom": [
+          "USB rechargeable.",
+          "No batteries."
+        ],
+        "highlight": [
+          "rechargeable."
+        ]
+      }
+    ],
+    "colors_after": 9,
+    "fit": true
+  },
+  "caption": "For the cat who is bored the minute you leave. 🐱\n\nThe tail starts wiggling when your cat walks by, then changes direction to wake up the hunter inside.\n\n🐾 Motion sensor · USB rechargeable\n\nShop now: link in bio · lidpet.store\n\n#catlover #catsofinstagram #catparent #petparent #giftforcatlovers #lidpet #indoorcats",
+  "tiktok_caption": "For the cat who is bored when you leave 🐱 Link in bio #cattok #cattoys #indoorcats #lidpet",
+  "pin_title": "Motion-Activated Moving Tail Smart Cat Toy",
+  "pin_description": "A rechargeable smart cat toy with a wiggling tail that moves when your cat comes near. Keeps indoor cats busy. Shop at lidpet.store."
+}

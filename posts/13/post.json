@@ -1,0 +1,73 @@
+{
+  "priority": 3,
+  "product": "Santa Legs Hat for Dogs & Cats",
+  "short_name": "Santa Hat for Pets",
+  "price": "$14.99",
+  "url": "https://lidpet.store/products/santa-hat-for-dogs-cats",
+  "headline": [
+    "SANTA HAT",
+    "FOR DOGS & CATS"
+  ],
+  "pin_subtitle": "The funniest Christmas hat for your pet",
+  "image_order": [
+    "02.jpg",
+    "03.jpg",
+    "06.jpg",
+    "04.jpg",
+    "05.jpg",
+    "01.jpg"
+  ],
+  "mockups": [
+    "03.jpg",
+    "04.jpg",
+    "05.jpg",
+    "06.jpg"
+  ],
+  "video": {
+    "scenes": [
+      {
+        "image": "02.jpg",
+        "top": [
+          "When Santa gets"
+        ],
+        "bottom": [
+          "stuck in the chimney"
+        ],
+        "highlight": [
+          "santa"
+        ],
+        "seconds": 4.0
+      },
+      {
+        "image": "03.jpg",
+        "top": [
+          "Santa legs hat"
+        ],
+        "bottom": [
+          "for dogs & cats"
+        ],
+        "highlight": [
+          "dogs",
+          "cats"
+        ]
+      },
+      {
+        "image": "06.jpg",
+        "bottom": [
+          "The Christmas photo",
+          "your pet was born for"
+        ],
+        "highlight": [
+          "christmas"
+        ]
+      }
+    ],
+    "colors_after": 9,
+    "fit": true
+  },
+  "caption": "When Santa gets stuck in the chimney… 🎅😂\n\nThe funniest Christmas hat for dogs and cats. Soft, comfy and made for holiday photos.\n\n🐾 Adjustable strap · fits small dogs and cats\n\n🎄 Order by December 10 for Christmas delivery.\n\nShop now: link in bio · lidpet.store\n\n#doglover #catlover #petparent #dogsofinstagram #catsofinstagram #petgifts #lidpet #funnypets #christmaspets",
+  "tiktok_caption": "When Santa gets stuck in the chimney 🎅😂 Link in bio #dogtok #cattok #funnypets #christmas #lidpet",
+  "pin_title": "Funny Santa Legs Christmas Hat for Dogs and Cats",
+  "pin_description": "A funny Santa legs hat for dogs and cats. Soft, adjustable and perfect for Christmas photos. Shop at lidpet.store.",
+  "board": "Pet Christmas Gifts"
+}

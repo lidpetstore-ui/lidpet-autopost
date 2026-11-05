@@ -1,0 +1,79 @@
+{
+  "board": "Pet Parent Gifts",
+  "product": "Foldable Cat Play Tunnel",
+  "short_name": "Cat Play Tunnel",
+  "price": "$19.99",
+  "url": "https://lidpet.store/products/foldable-cat-play-tunnel",
+  "headline": [
+    "CAT PLAY",
+    "TUNNEL"
+  ],
+  "pin_subtitle": "Foldable crinkle tunnel · hours of hide-and-seek",
+  "skip_images": [
+    "07.jpg"
+  ],
+  "image_order": [
+    "03.jpg",
+    "02.jpg",
+    "06.jpg",
+    "05.jpg",
+    "04.jpg",
+    "08.jpg",
+    "11.jpg",
+    "12.jpg",
+    "01.jpg",
+    "09.jpg"
+  ],
+  "mockups": [
+    "04.jpg",
+    "08.jpg",
+    "11.jpg",
+    "12.jpg"
+  ],
+  "video": {
+    "scenes": [
+      {
+        "image": "03.jpg",
+        "top": [
+          "Zoomies:"
+        ],
+        "bottom": [
+          "activated."
+        ],
+        "highlight": [
+          "activated."
+        ],
+        "seconds": 4.0
+      },
+      {
+        "image": "02.jpg",
+        "top": [
+          "Hide."
+        ],
+        "bottom": [
+          "Pounce. Repeat."
+        ],
+        "highlight": [
+          "pounce."
+        ]
+      },
+      {
+        "image": "06.jpg",
+        "bottom": [
+          "Folds flat",
+          "when playtime is over"
+        ],
+        "highlight": [
+          "flat"
+        ]
+      }
+    ],
+    "colors_after": 1,
+    "colors_text": "Pick a style",
+    "fit": true
+  },
+  "caption": "Zoomies: activated. 🐱💨\n\nA crinkly cat tunnel for hiding, pouncing and zooming. It folds flat when playtime is over.\n\n🐾 6 styles · hanging toy included\n\nShop now: link in bio · lidpet.store\n\n#catlover #catsofinstagram #catparent #petparent #giftforcatlovers #lidpet #cattoys",
+  "tiktok_caption": "Zoomies: activated 🐱💨 Link in bio #cattok #cattoys #catsoftiktok #lidpet",
+  "pin_title": "Foldable Cat Play Tunnel with Hanging Toy",
+  "pin_description": "A crinkly, collapsible cat tunnel with hanging toys. Hours of hide-and-seek, then it folds flat. Shop at lidpet.store."
+}

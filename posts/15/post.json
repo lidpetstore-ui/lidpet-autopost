@@ -1,0 +1,77 @@
+{
+  "priority": 1,
+  "product": "Christmas Squeaky Plush Dog Toy",
+  "short_name": "Christmas Plush Toy",
+  "price": "$9.99",
+  "url": "https://lidpet.store/products/christmas-squeaky-plush-dog-toy",
+  "headline": [
+    "NAUGHTY OR NICE?",
+    "CHRISTMAS TOYS"
+  ],
+  "pin_subtitle": "Squeaky Christmas plush toys for dogs",
+  "skip_images": [
+    "02.jpg"
+  ],
+  "image_order": [
+    "03.jpg",
+    "05.jpg",
+    "07.jpg",
+    "01.jpg",
+    "04.jpg",
+    "06.jpg",
+    "08.jpg"
+  ],
+  "mockups": [
+    "01.jpg",
+    "04.jpg",
+    "07.jpg",
+    "05.jpg"
+  ],
+  "video": {
+    "scenes": [
+      {
+        "image": "03.jpg",
+        "top": [
+          "Naughty"
+        ],
+        "bottom": [
+          "or nice?"
+        ],
+        "highlight": [
+          "nice?"
+        ],
+        "seconds": 4.0
+      },
+      {
+        "image": "05.jpg",
+        "top": [
+          "Squeaky"
+        ],
+        "bottom": [
+          "Christmas toys"
+        ],
+        "highlight": [
+          "christmas"
+        ]
+      },
+      {
+        "image": "07.jpg",
+        "bottom": [
+          "The stocking stuffer",
+          "your dog will love"
+        ],
+        "highlight": [
+          "dog"
+        ]
+      }
+    ],
+    "colors_after": 1,
+    "colors_text": "Pick a toy",
+    "fit": true
+  },
+  "caption": "Naughty or nice? Your dog gets a gift either way. 🎁🐶\n\nSoft squeaky Christmas plush toys: Santa, Naughty and Nice bones.\n\n🐾 From $9.99 · the perfect stocking stuffer\n\n🎄 Order by December 10 for Christmas delivery.\n\nShop now: link in bio · lidpet.store\n\n#doglover #dogsofinstagram #dogparent #petparent #christmasgifts #giftfordoglovers #dogchristmas #lidpet #dogtoys",
+  "tiktok_caption": "Naughty or nice? Your dog gets a gift either way 🎁 Link in bio #dogtok #dogtoys #christmas #lidpet",
+  "pin_title": "Christmas Squeaky Plush Dog Toys – Naughty or Nice",
+  "pin_description": "Squeaky Christmas plush toys for dogs: Santa, Naughty and Nice bones. The perfect stocking stuffer from $9.99. Shop at lidpet.store.",
+  "board": "Pet Christmas Gifts"
+}

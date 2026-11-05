@@ -272,7 +272,12 @@ def check_connections(on):
 
 def next_folder():
     ready = lambda p: (p / "post.json").exists() and (READY / p.name / "video.mp4").exists()
-    folders = sorted([p for p in POSTS.iterdir() if p.is_dir() and ready(p)], key=lambda p: nat(p.name))
+
+    def order(p):
+        # post.json "priority": ra9m kbir = kaytposṭa 9bel (masalan produits dyal Noël). Sinon b ra9m dyal dossier.
+        prio = json.loads((p / "post.json").read_text(encoding="utf-8")).get("priority", 0)
+        return (-prio, nat(p.name))
+    folders = sorted([p for p in POSTS.iterdir() if p.is_dir() and ready(p)], key=order)
     if folders:
         return folders[0]
     done = sorted([p for p in DONE.iterdir() if p.is_dir()], key=lambda p: nat(p.name))

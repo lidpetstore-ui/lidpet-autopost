@@ -1,0 +1,76 @@
+{
+  "priority": 2,
+  "product": "Christmas Plaid Bandana, Hat & Bow Tie",
+  "short_name": "Christmas Pet Plaid",
+  "price": "$12.99",
+  "url": "https://lidpet.store/products/christmas-plaid-pet-bandana-hat-bow-tie",
+  "headline": [
+    "CHRISTMAS",
+    "PLAID FOR PETS"
+  ],
+  "pin_subtitle": "Bandana, hat or bow tie · for dogs & cats",
+  "image_order": [
+    "02.jpg",
+    "01.jpg",
+    "08.jpg",
+    "03.jpg",
+    "05.jpg",
+    "04.jpg",
+    "06.jpg",
+    "07.jpg"
+  ],
+  "mockups": [
+    "01.jpg",
+    "03.jpg",
+    "05.jpg",
+    "08.jpg"
+  ],
+  "video": {
+    "scenes": [
+      {
+        "image": "02.jpg",
+        "top": [
+          "Holiday look:"
+        ],
+        "bottom": [
+          "unlocked."
+        ],
+        "highlight": [
+          "unlocked."
+        ],
+        "seconds": 4.0
+      },
+      {
+        "image": "01.jpg",
+        "top": [
+          "Red plaid"
+        ],
+        "bottom": [
+          "bandana"
+        ],
+        "highlight": [
+          "plaid"
+        ]
+      },
+      {
+        "image": "03.jpg",
+        "bottom": [
+          "Bandana, hat",
+          "or bow tie"
+        ],
+        "highlight": [
+          "bow",
+          "tie"
+        ]
+      }
+    ],
+    "colors_after": 1,
+    "colors_text": "Pick your style",
+    "fit": true
+  },
+  "caption": "Holiday look: unlocked. 🎄❤️\n\nClassic red plaid for dogs and cats. Choose a bandana, a Santa hat or a dapper bow tie.\n\n🐾 6 festive styles · easy to put on\n\n🎄 Order by December 10 for Christmas delivery.\n\nShop now: link in bio · lidpet.store\n\n#doglover #catlover #petparent #dogsofinstagram #catsofinstagram #petgifts #lidpet #dogbandana",
+  "tiktok_caption": "Holiday look: unlocked 🎄 Link in bio #dogtok #cattok #dogbandana #christmaspets #lidpet",
+  "pin_title": "Christmas Plaid Pet Bandana, Hat and Bow Tie",
+  "pin_description": "Red plaid and snowflake Christmas bandanas, hats and bow ties for dogs and cats. Under $15. Shop at lidpet.store.",
+  "board": "Pet Christmas Gifts"
+}

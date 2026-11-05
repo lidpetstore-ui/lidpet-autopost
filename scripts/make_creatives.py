@@ -18,7 +18,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFont, ImageOps
+from PIL import Image, ImageDraw, ImageFilter, ImageFont, ImageOps
 
 ROOT = Path(__file__).resolve().parent.parent
 POSTS = ROOT / "posts"
@@ -220,7 +220,16 @@ def zoom(img, t, z0, z1, pan, anchor=(0.5, 0.5)):
 
 def video_scenes(folder, cfg):
     """Scenes men post.json -> video.scenes. Kol scene: image, top (text fo9), bottom (text lta7t)."""
-    fill = lambda n, fy, fx=0.5: ImageOps.fit(load(folder, n), (VW, VH), Image.LANCZOS, centering=(fx, fy))
+    def fill(n, fy, fx=0.5, fit=False):
+        im = load(folder, n)
+        if not fit:
+            return ImageOps.fit(im, (VW, VH), Image.LANCZOS, centering=(fx, fy))
+        # "fit": l'produit kaml f lwest, w nefs tswira mblurriya f l'khalfiya (l tsawer mkerr3in dyal produits)
+        bg = ImageOps.fit(im, (VW, VH), Image.LANCZOS).filter(ImageFilter.GaussianBlur(40))
+        bg = Image.blend(bg, Image.new("RGB", (VW, VH), CREAM), 0.35)
+        fg = ImageOps.contain(im, (VW, int(VH * 0.62)), Image.LANCZOS)
+        bg.paste(fg, ((VW - fg.width) // 2, (VH - fg.height) // 2))
+        return bg
     v = cfg["video"]
     scenes = []
     pans = [(0, -0.3), (0.3, 0), (0, 0.2), (-0.3, 0)]
@@ -232,14 +241,16 @@ def video_scenes(folder, cfg):
             caps.append((caption_box(sc["bottom"], sc.get("highlight", [])), 0.8 if sc.get("top") else 0.2, 0.74))
         # "zoom": [debut, fin] > 1 kay9ṭe3 l'text li deja mktoub 3la tswira (fo9 w lta7t)
         z = tuple(sc.get("zoom", [1.0, 1.12]))
-        scenes.append(dict(img=fill(sc["image"], sc.get("focus", 0.35), sc.get("focus_x", 0.5)), dur=sc.get("seconds", 3.8),
+        fit = sc.get("fit", v.get("fit", False))
+        scenes.append(dict(img=fill(sc["image"], sc.get("focus", 0.35), sc.get("focus_x", 0.5), fit), dur=sc.get("seconds", 3.8),
                            pan=(0, 0) if z[0] > 1.05 else pans[i % 4], caps=caps, z=z,
                            anchor=(sc.get("zoom_x", 0.5), sc.get("zoom_y", 0.5))))
         if i == v.get("colors_after", 1):
             mockups = mockups_of(folder, cfg)[:6]
             label = caption_box([v.get("colors_text", "Pick your color")], ["color"])
             for n in mockups:
-                scenes.append(dict(img=fill(n, 0.45), dur=0.9, pan=(0, 0), caps=[(label, -1, 0.16)], z=(1.04, 1.04)))
+                scenes.append(dict(img=fill(n, 0.45, 0.5, v.get("fit", False)), dur=0.9, pan=(0, 0),
+                                   caps=[(label, -1, 0.16)], z=(1.04, 1.04)))
     scenes.append(dict(end=True, dur=3.5))
     return scenes
 
