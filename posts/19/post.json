@@ -1,0 +1,70 @@
+{
+  "priority": 6,
+  "kind": "apparel",
+  "board": "Pet Christmas Gifts",
+  "product": "Merry Christmas From Our Pack To Yours Hoodie",
+  "short_name": "Pack Christmas Hoodie",
+  "price": "$43.99",
+  "url": "https://lidpet.store/products/merry-christmas-from-our-pack-to-yours-hoodie-dog-cat-christmas-sweatshirt",
+  "headline": [
+    "MERRY CHRISTMAS",
+    "FROM OUR PACK"
+  ],
+  "pin_subtitle": "Dog & cat Christmas hoodie · 5 colors · S–5XL",
+  "mockups": [
+    "4.jpg",
+    "5.jpg",
+    "6.jpg",
+    "7.jpg",
+    "8.jpg"
+  ],
+  "pin_hero": "9.png",
+  "video": {
+    "scenes": [
+      {
+        "image": "9.png",
+        "top": [
+          "Christmas photo"
+        ],
+        "bottom": [
+          "with the whole pack"
+        ],
+        "highlight": [
+          "pack"
+        ],
+        "seconds": 4.0,
+        "focus": 0.45
+      },
+      {
+        "image": "6.jpg",
+        "fit": true,
+        "top": [
+          "Merry Christmas"
+        ],
+        "bottom": [
+          "from our pack to yours"
+        ],
+        "highlight": [
+          "pack"
+        ]
+      },
+      {
+        "image": "4.jpg",
+        "fit": true,
+        "bottom": [
+          "Dog & cat lovers",
+          "this one's for you"
+        ],
+        "highlight": [
+          "Dog",
+          "cat"
+        ]
+      }
+    ],
+    "colors_after": 1
+  },
+  "caption": "Merry Christmas from our pack to yours. 🎄🐶🐱\n\nThe cozy hoodie for the family photo, the tree, and every movie night until New Year.\n\n🐾 Soft, warm hoodie in 5 colors · S–5XL\n🐾 Made for dog and cat lovers\n🐾 A Christmas gift they will actually wear\n\nShop now: link in bio · lidpet.store\n\n#christmashoodie #christmasgift #giftfordoglovers #giftforcatlovers #doglover #catlover #petparent #dogsofinstagram #catsofinstagram #lidpet",
+  "tiktok_caption": "Christmas photo with the whole pack 🎄🐶🐱 Link in bio #christmas #doglover #catlover #lidpet",
+  "pin_title": "Merry Christmas From Our Pack To Yours Hoodie – Dog & Cat Christmas Sweatshirt",
+  "pin_description": "Cozy Christmas hoodie for dog and cat lovers. 5 colors, sizes S–5XL. A perfect Christmas gift for pet parents. Shop at lidpet.store."
+}

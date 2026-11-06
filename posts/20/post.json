@@ -1,0 +1,69 @@
+{
+  "priority": 1,
+  "kind": "apparel",
+  "board": "Pet Parent Gifts",
+  "product": "Cat Mom Club Oversized Tee",
+  "short_name": "Cat Mom Club Tee",
+  "price": "$25.99",
+  "url": "https://lidpet.store/products/cat-mom-oversized-tee",
+  "headline": [
+    "CAT MOM",
+    "CLUB"
+  ],
+  "pin_subtitle": "Oversized garment-dyed tee · 5 colors · S–3XL",
+  "mockups": [
+    "3.jpg",
+    "4.jpg",
+    "5.jpg",
+    "6.jpg",
+    "7.jpg"
+  ],
+  "pin_hero": "2.png",
+  "video": {
+    "scenes": [
+      {
+        "image": "2.png",
+        "top": [
+          "Life is better"
+        ],
+        "bottom": [
+          "with cats."
+        ],
+        "highlight": [
+          "cats."
+        ],
+        "seconds": 4.0,
+        "focus": 0.4
+      },
+      {
+        "image": "5.jpg",
+        "fit": true,
+        "top": [
+          "Official member:"
+        ],
+        "bottom": [
+          "Cat Mom Club"
+        ],
+        "highlight": [
+          "Club"
+        ]
+      },
+      {
+        "image": "3.jpg",
+        "fit": true,
+        "bottom": [
+          "Soft oversized fit",
+          "washed colors"
+        ],
+        "highlight": [
+          "oversized"
+        ]
+      }
+    ],
+    "colors_after": 1
+  },
+  "caption": "Welcome to the Cat Mom Club. 🐱💕\n\nMembership rules: your cat is the boss, and life is better with cats.\n\n🐾 Oversized garment-dyed tee in 5 washed colors · S–3XL\n🐾 Soft, relaxed fit for every day\n🐾 A sweet gift for the cat lover in your life\n\nShop now: link in bio · lidpet.store\n\n#catmom #catlover #catsofinstagram #catparent #oversizedtee #giftforcatlovers #crazycatlady #petparent #catlife #lidpet",
+  "tiktok_caption": "Life is better with cats 🐱 Cat Mom Club, link in bio #catmom #cattok #catlover #lidpet",
+  "pin_title": "Cat Mom Club Oversized Tee – Life Is Better With Cats Shirt",
+  "pin_description": "Oversized garment-dyed tee for cat moms. 5 washed colors, sizes S–3XL. A cute gift for cat lovers. Shop at lidpet.store."
+}

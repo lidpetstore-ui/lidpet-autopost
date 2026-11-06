@@ -270,6 +270,13 @@ def check_connections(on):
             print(f"  [conn] Telegram FAIL: {e}", file=sys.stderr)
 
 
+LAST_KIND = POSTS / ".last_kind"
+
+
+def kind_of(p):
+    return json.loads((p / "post.json").read_text(encoding="utf-8")).get("kind", "apparel")
+
+
 def next_folder():
     ready = lambda p: (p / "post.json").exists() and (READY / p.name / "video.mp4").exists()
 
@@ -279,7 +286,10 @@ def next_folder():
         return (-prio, nat(p.name))
     folders = sorted([p for p in POSTS.iterdir() if p.is_dir() and ready(p)], key=order)
     if folders:
-        return folders[0]
+        # Tnawob: post "apparel" (Printful) mn ba3d post "gear" (CJ) w l3aks, ila kayn.
+        last = LAST_KIND.read_text(encoding="utf-8").strip() if LAST_KIND.exists() else ""
+        other = [p for p in folders if kind_of(p) != last]
+        return other[0] if other else folders[0]
     done = sorted([p for p in DONE.iterdir() if p.is_dir()], key=lambda p: nat(p.name))
     if RECYCLE and done and not DRY:
         print(f"posts/ khawya: kanrj3o {len(done)} posts men done/ w nbdaw men l'awal")
@@ -342,6 +352,7 @@ def main():
         return
     if ok:
         status_file.unlink(missing_ok=True)
+        LAST_KIND.write_text(cfg.get("kind", "apparel"), encoding="utf-8")
         shutil.move(str(folder), str(DONE / folder.name))
         print(f"Kml: post {folder.name} -> done/")
     else:

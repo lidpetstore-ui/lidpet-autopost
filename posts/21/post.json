@@ -1,0 +1,68 @@
+{
+  "priority": 1,
+  "kind": "apparel",
+  "board": "Pet Parent Gifts",
+  "product": "Does Not Fetch Does Not Come When Called Tee",
+  "short_name": "Does Not Fetch Tee",
+  "price": "$25.99",
+  "url": "https://lidpet.store/products/does-not-fetch-does-not-come-when-called-t-shirt-funny-cat-owner-tee",
+  "headline": [
+    "DOES NOT FETCH",
+    "DOES NOT COME"
+  ],
+  "pin_subtitle": "Funny cat owner tee · 4 colors · XS–2XL",
+  "mockups": [
+    "5.jpg",
+    "6.jpg",
+    "7.jpg",
+    "8.jpg"
+  ],
+  "pin_hero": "2.png",
+  "video": {
+    "scenes": [
+      {
+        "image": "2.png",
+        "top": [
+          "My cat:"
+        ],
+        "bottom": [
+          "does not fetch."
+        ],
+        "highlight": [
+          "fetch."
+        ],
+        "seconds": 4.0,
+        "focus": 0.4
+      },
+      {
+        "image": "6.jpg",
+        "fit": true,
+        "top": [
+          "Does not come"
+        ],
+        "bottom": [
+          "when called."
+        ],
+        "highlight": [
+          "called."
+        ]
+      },
+      {
+        "image": "8.jpg",
+        "fit": true,
+        "bottom": [
+          "Still the best",
+          "roommate ever"
+        ],
+        "highlight": [
+          "best"
+        ]
+      }
+    ],
+    "colors_after": 1
+  },
+  "caption": "Does not fetch. Does not come when called. Still perfect. 🐱\n\nFor everyone who lives with a cat who has other plans.\n\n🐾 Soft cotton tee in 4 colors · XS–2XL\n🐾 For cat owners with a sense of humor\n🐾 An easy gift for any cat lover\n\nShop now: link in bio · lidpet.store\n\n#catlover #catsofinstagram #funnycat #catowner #catparent #funnytshirt #giftforcatlovers #petparent #catlife #lidpet",
+  "tiktok_caption": "My cat does not fetch. Does not come when called. Still perfect 🐱 Link in bio #cattok #funnycat #catlover #lidpet",
+  "pin_title": "Does Not Fetch Does Not Come When Called Tee – Funny Cat Owner Shirt",
+  "pin_description": "Funny tee for cat owners whose cat has other plans. 4 colors, sizes XS–2XL. A great gift for cat lovers. Shop at lidpet.store."
+}

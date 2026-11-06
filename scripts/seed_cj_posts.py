@@ -8,11 +8,12 @@ S = "https://lidpet.store/products/"
 DOG = "#doglover #dogsofinstagram #dogparent #petparent #christmasgifts #giftfordoglovers #dogchristmas #lidpet"
 CAT = "#catlover #catsofinstagram #catparent #petparent #giftforcatlovers #lidpet"
 PET = "#doglover #catlover #petparent #dogsofinstagram #catsofinstagram #petgifts #lidpet"
-XMAS = "\n\n🎄 Order by December 10 for Christmas delivery."
+XMAS = "\n\n🎄 Order early for Christmas delivery."
 
 
 def write(n, **c):
     c.setdefault("board", "Pet Christmas Gifts")
+    c.setdefault("kind", "gear")
     c["video"].setdefault("fit", True)
     (POSTS / str(n) / "post.json").write_text(json.dumps(c, indent=2, ensure_ascii=False), encoding="utf-8")
     print("wrote", n)
