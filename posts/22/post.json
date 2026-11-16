@@ -1,0 +1,75 @@
+{
+  "priority": 9,
+  "kind": "gear",
+  "board": "Pet Christmas Gifts",
+  "product": "Santa Paws Personalized Pet Ornament",
+  "short_name": "Santa Paws Ornament",
+  "price": "$22",
+  "url": "https://lidpet.store/products/santa-paws-personalized-pet-ornament",
+  "headline": [
+    "SANTA PAWS",
+    "WITH THEIR NAME"
+  ],
+  "pin_subtitle": "Personalized paw ornament · Free US shipping",
+  "mockups": [
+    "1.jpg",
+    "5.jpg",
+    "3.jpg",
+    "4.jpg"
+  ],
+  "pin_hero": "1.jpg",
+  "video": {
+    "fit": true,
+    "scenes": [
+      {
+        "image": "1.jpg",
+        "fit": false,
+        "top": [
+          "The gift every pet mom"
+        ],
+        "bottom": [
+          "will hang every year"
+        ],
+        "highlight": [
+          "every",
+          "year"
+        ],
+        "seconds": 4.0,
+        "focus": 0.45
+      },
+      {
+        "image": "2.jpg",
+        "top": [
+          "Their name."
+        ],
+        "bottom": [
+          "Their ornament."
+        ],
+        "highlight": [
+          "name.",
+          "ornament."
+        ]
+      },
+      {
+        "image": "3.jpg",
+        "fit": false,
+        "top": [
+          "One for your pup,"
+        ],
+        "bottom": [
+          "one for a friend"
+        ],
+        "highlight": [
+          "pup,",
+          "friend"
+        ],
+        "focus": 0.5
+      }
+    ],
+    "colors_after": 9
+  },
+  "caption": "Every pet deserves a spot on the tree. 🎄🐾\n\nSanta Paws is a paw-shaped Christmas ornament personalized with your dog's or cat's name.\n\n🐾 Their name, printed just for them\n🚚 FREE US shipping\n🎁 Buy 2, save 15% · 3+, save 20%\n\nOrder by Dec 5 for Christmas delivery. Shop: link in bio · lidpet.store\n\n#christmasornament #personalizedornament #petornament #dogornament #catornament #giftfordogmom #giftforcatlovers #petparent #christmasgift #lidpet",
+  "tiktok_caption": "Their name. Their ornament. 🎄🐾 Link in bio #christmasornament #dogmom #catmom #lidpet",
+  "pin_title": "Santa Paws Personalized Pet Ornament – Dog & Cat Name Christmas Ornament 2026",
+  "pin_description": "Paw-shaped metal Christmas ornament personalized with your pet's name. Free US shipping, buy 2 save 15%. A sweet gift for dog and cat lovers. Shop at lidpet.store."
+}

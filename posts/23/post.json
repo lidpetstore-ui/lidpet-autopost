@@ -1,0 +1,71 @@
+{
+  "priority": 8,
+  "kind": "apparel",
+  "board": "Pet Christmas Gifts",
+  "product": "Merry Christmas Ya Filthy Cat Hoodie",
+  "short_name": "Ya Filthy Cat Hoodie",
+  "price": "$43.99",
+  "url": "https://lidpet.store/products/merry-christmas-ya-filthy-cat-hoodie-funny-cat-christmas-sweatshirt",
+  "headline": [
+    "MERRY CHRISTMAS",
+    "YA FILTHY CAT"
+  ],
+  "pin_subtitle": "Funny cat Christmas hoodie · 5 colors · S–5XL",
+  "mockups": [
+    "4.jpg",
+    "5.jpg",
+    "6.jpg",
+    "7.jpg",
+    "8.jpg"
+  ],
+  "pin_hero": "1.png",
+  "video": {
+    "scenes": [
+      {
+        "image": "1.png",
+        "top": [
+          "Matching for Christmas"
+        ],
+        "bottom": [
+          "(the cat approves)"
+        ],
+        "highlight": [
+          "Christmas",
+          "approves)"
+        ],
+        "seconds": 4.0,
+        "focus": 0.35
+      },
+      {
+        "image": "4.jpg",
+        "fit": true,
+        "top": [
+          "Merry Christmas,"
+        ],
+        "bottom": [
+          "ya filthy cat"
+        ],
+        "highlight": [
+          "filthy",
+          "cat"
+        ]
+      },
+      {
+        "image": "5.jpg",
+        "fit": true,
+        "bottom": [
+          "Cat lovers,",
+          "this one's for you"
+        ],
+        "highlight": [
+          "Cat"
+        ]
+      }
+    ],
+    "colors_after": 1
+  },
+  "caption": "Merry Christmas, ya filthy cat. 🎄🐱\n\nThe most honest Christmas message in any house with a cat in it. Warm fleece, low standards, unconditional love.\n\n🐾 Cozy hoodie in 5 colors · S–5XL\n🐾 Matching his & hers Christmas look\n🐾 A gift every cat lover will actually wear\n\nShop now: link in bio · lidpet.store\n\n#catlover #catsofinstagram #christmashoodie #funnycat #catmom #catdad #christmasgift #giftforcatlovers #matchingoutfits #lidpet",
+  "tiktok_caption": "Merry Christmas, ya filthy cat 🎄🐱 Link in bio #cattok #christmas #catlover #lidpet",
+  "pin_title": "Merry Christmas Ya Filthy Cat Hoodie – Funny Cat Christmas Sweatshirt",
+  "pin_description": "Funny Christmas hoodie for cat lovers. 5 colors, sizes S–5XL. A matching couple gift for Christmas. Shop at lidpet.store."
+}
