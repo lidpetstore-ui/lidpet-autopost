@@ -3,10 +3,12 @@ name: Lidpet Auto Post
 
 on:
   schedule:
-    # Post 1: 14:00 UTC = 9 AM New York/Toronto, 2 PM London, 3 PM Paris/Berlin.
-    - cron: "0 14 * * *"
-    # Post 2: 00:00 UTC = 7 PM New York/Toronto, 4 PM Los Angeles (prime time f US/Canada).
-    - cron: "0 0 * * *"
+    # GitHub kayt3t3el ~40-60 min, donc kanbdaw 9bel b chwiya.
+    # Post 1: 16:15 UTC -> kaytposta ~17:00 UTC = 12 PM New York/Toronto (lunch break), 9 AM Los Angeles.
+    - cron: "15 16 * * *"
+    # Post 2: 00:15 UTC -> kaytposta ~01:00 UTC = 8 PM New York/Toronto, 5 PM Los Angeles (prime time).
+    # Mla7da: had les sa3at 3la EST (hiver). F summer (DST, men mars) kaywlliw 1 PM w 9 PM ET.
+    - cron: "15 0 * * *"
   workflow_dispatch:
     inputs:
       dry_run:
