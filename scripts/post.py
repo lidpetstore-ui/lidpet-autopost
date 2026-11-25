@@ -45,6 +45,9 @@ TT_MODE = env("TIKTOK_MODE", "inbox")
 # Telegram: l'vidéo + captions kaywslou lik f téléphone, w nta katposti l'Reel b trending sound.
 # Mli Telegram mconnecti, Reels dyal Instagram w vidéos dyal Facebook ma kaytposṭawch automatiquement.
 TG_TOKEN, TG_CHAT = env("TELEGRAM_BOT_TOKEN", ""), env("TELEGRAM_CHAT_ID", "")
+# AUTO_REELS=1 (default): Reels + vidéos dyal Facebook kaytposṭaw bou7dhom (b music men assets/music/),
+# w Telegram kayb9a ysift l'vidéo ghir l TikTok. AUTO_REELS=0 -> nta katposti l'Reels men Telegram.
+AUTO_REELS = (env("AUTO_REELS") or "1") == "1"
 
 
 def nat(name):
@@ -202,7 +205,8 @@ def facebook_caption(cfg):
 
 
 def telegram_send(video, cfg, folder_name):
-    title = f"🎬 Lidpet post {folder_name}: {cfg['product']} ({cfg['price']})\nZid trending sound w posti f Instagram, Facebook w TikTok 👇"
+    where = "TikTok (Instagram w Facebook tposṭaw automatiquement)" if AUTO_REELS else "Instagram, Facebook w TikTok"
+    title = f"🎬 Lidpet post {folder_name}: {cfg['product']} ({cfg['price']})\nZid trending sound w posti f {where} 👇"
     with open(video, "rb") as f:
         tg("sendVideo", data={"chat_id": TG_CHAT, "caption": title[:1024], "supports_streaming": "true"},
            files={"video": (f"lidpet_{folder_name}.mp4", f, "video/mp4")})
@@ -216,13 +220,14 @@ def telegram_send(video, cfg, folder_name):
 # ---------------- Main ----------------
 
 def enabled():
-    manual_video = bool(TG_TOKEN and TG_CHAT)  # l'vidéos kaymchiw l Telegram, nta katposṭihom
+    telegram = bool(TG_TOKEN and TG_CHAT)
+    manual_video = telegram and not AUTO_REELS  # l'vidéos kaymchiw ghir l Telegram, nta katposṭihom
     return {
         "instagram_carousel": bool(FB_TOKEN and IG_USER_ID),
         "instagram_reel": bool(FB_TOKEN and IG_USER_ID) and not manual_video,
         "facebook_photos": bool(FB_TOKEN and FB_PAGE_ID),
         "facebook_video": bool(FB_TOKEN and FB_PAGE_ID) and not manual_video,
-        "telegram_video": manual_video,
+        "telegram_video": telegram,
         "pinterest_pin": PIN_LIVE and bool(PIN_BOARD and (PIN_TOKEN or (PIN_REFRESH and PIN_APP_ID and PIN_APP_SECRET))),
         "tiktok_video": bool(TT_KEY and TT_SECRET and TT_REFRESH),
     }
@@ -315,7 +320,7 @@ def main():
         "instagram_carousel": lambda: instagram_carousel(carousel, cfg["caption"]),
         "instagram_reel": lambda: instagram_reel(video, cfg["caption"]),
         "facebook_photos": lambda: facebook_photos(carousel, facebook_caption(cfg)),
-        "facebook_video": lambda: facebook_video(video, cfg["caption"]),
+        "facebook_video": lambda: facebook_video(video, facebook_caption(cfg)),
         "pinterest_pin": lambda: pinterest_pin(pin, cfg),
         "tiktok_video": lambda: tiktok_video(video, cfg.get("tiktok_caption", cfg["caption"])),
         "telegram_video": lambda: telegram_send(video, cfg, folder.name),

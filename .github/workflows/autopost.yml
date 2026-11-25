@@ -72,6 +72,8 @@ jobs:
           TIKTOK_MODE: inbox
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          # "0" f Settings > Variables ila bghiti tposti l'Reels b yddik men Telegram
+          AUTO_REELS: ${{ vars.AUTO_REELS || '1' }}
         run: python scripts/post.py
 
       - name: Save progress

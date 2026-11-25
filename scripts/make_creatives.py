@@ -23,6 +23,7 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont, ImageOps
 ROOT = Path(__file__).resolve().parent.parent
 POSTS = ROOT / "posts"
 READY = ROOT / "ready"
+DONE = ROOT / "done"
 ASSETS = ROOT / "assets"
 LOGO = ASSETS / "logo.png"
 
@@ -342,10 +343,31 @@ def build(folder: Path):
     print(f"[ok] {folder.name}: carousel + pin + video")
 
 
+def has_audio(video: Path) -> bool:
+    r = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "a", "-show_entries", "stream=index",
+                        "-of", "csv=p=0", str(video)], capture_output=True, text=True)
+    return bool(r.stdout.strip())
+
+
+def add_missing_music(folders):
+    """Vidéos l9dam li bla son: kan3awdo nbniw ghir l'vidéo b music (posts/ w done/)."""
+    for f in folders:
+        video = READY / f.name / "video.mp4"
+        if not video.exists() or not (f / "post.json").exists() or has_audio(video):
+            continue
+        cfg = load_config(f)
+        if pick_music(f, cfg):
+            make_video(f, cfg, READY / f.name)
+            print(f"[ok] {f.name}: music tzadt l'vidéo")
+
+
 def main(argv):
     force = "--force" in argv
     wanted = [a for a in argv if not a.startswith("--")]
     folders = sorted([p for p in POSTS.iterdir() if p.is_dir()], key=lambda p: nat(p.name))
+    done = sorted([p for p in DONE.iterdir() if p.is_dir()], key=lambda p: nat(p.name)) if DONE.exists() else []
+    if not wanted:
+        add_missing_music(folders + done)
     for f in folders:
         if wanted and f.name not in wanted:
             continue
